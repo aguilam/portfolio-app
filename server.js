@@ -16,7 +16,6 @@ app.use('/', async (req, res) => {
     res.json(AllDocuments)
     console.log(AllDocuments)
 
-    await MongoDBclient.close()
     console.log("Закрыли подключение")
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
